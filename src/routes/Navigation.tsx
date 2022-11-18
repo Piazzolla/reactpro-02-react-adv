@@ -1,6 +1,8 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
-import { LazyPage1, LazyPage2, LazyPage3 } from '../01-lazyload/pages';
+// import { LazyPage1, LazyPage2, LazyPage3 } from '../01-lazyload/pages';
+
+import { routes } from './routes';
 
 import logo from '../logo.svg'
 
@@ -11,14 +13,9 @@ export const Navigation = () => {
                 <nav>
                     <img src={logo} alt="React Logo" />
                     <ul>
+                        { /* TODO: Crear navlinks dinamicos */ }
                         <li>
                             <NavLink to="/home" className={({ isActive }) => isActive ? 'nav-active' : ''}>Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-active' : ''}>About</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/users" className={({ isActive }) => isActive ? 'nav-active' : ''}>Users</NavLink>
                         </li>
                     </ul>
                 </nav>
