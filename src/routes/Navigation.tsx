@@ -30,12 +30,12 @@ export const Navigation = () => {
                     <Routes>
                         {
                             routes.map(route =>
-                                (<Route key={route.to} path={route.path} element={<route.Component />} />)
+                                (<Route key={route.to} path={route.path} element={<route.component />} />)
                             )
                         }
 
 
-                        <Route path="/*" element={<Navigate to={routes[0].to} replace />} />
+                        {/* <Route path="/*" element={<Navigate to={routes[0].to} replace />} /> */}
                     </Routes>
 
                 </div>
